@@ -14,10 +14,15 @@ def get_data(request):
 	conn.request("POST", "/data", payload, headers)
 	res = conn.getresponse()
 
+
+
 	status = res.status
 	data = res.read()
 	decod_res = json.loads(data)
 	data = json.dumps(decod_res)
+
+	if data == 'null':
+		status = 500
 
 	return HttpResponse(data, status=status, content_type="text/json")
 
@@ -38,5 +43,8 @@ def get_api(request):
 	data = res.read()
 	decod_res = json.loads(data)
 	data = json.dumps(decod_res)
+
+	if data == 'null':
+		status = 500
 
 	return HttpResponse(data, status=status, content_type="text/json")
