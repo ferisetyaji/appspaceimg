@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '8+2gi(0y7q3n@eoy^wmbru4^phx)9r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://app-spaceimg.herokuapp.com/']
+ALLOWED_HOSTS = ['app-spaceimg.herokuapp.com']
 
 
 # Application definition
